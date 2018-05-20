@@ -1,0 +1,9 @@
+{% extends "index.html" %}
+
+{% block content %}
+ <h1>User management system</h1>
+  <form method="POST" class="user-form" action="/users/create/">{% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="save btn btn-default">Save</button>
+  </form>
+{% endblock %}

@@ -1,0 +1,21 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="">
+        <table class="table">
+            <thead>
+                <th>Name</th>
+                <th>Email</th>
+            </thead>
+            <tbody>
+                {% for u in users %}
+                <tr>
+                    <td>{{u}}</td>
+                    <td> {{ u.first_name }}</td>
+                    <td> {{ u.email }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+{% endblock %}
