@@ -22,6 +22,5 @@ urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^tasks/', include('tasks.urls')),
     url(r'^home/', include('home.urls')),
-    url(r'project/', include('project.urls')),
     url(r'^users/',include('users.urls'))
 ]
