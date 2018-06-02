@@ -1,0 +1,32 @@
+{% extends "index.html" %}
+
+{% block content %}
+    <div class="col-sm-12">
+    <a class="btn btn-success pull-right" href="/users/register/">Add User</a>
+        <div class="">
+            <table class="table">
+                <thead>
+                    <th>Sr.No.</th>
+                    <th>Name</th>
+                    <th>Username</th>
+                    <th>Email</th>
+                    <th>Action</th>
+                </thead>
+                <tbody>
+                    {% for u in users %}
+                    <tr>
+                        <td>{{forloop.counter}}</td>
+                        <td> {{ u.first_name }}</td>
+                        <td> {{u.username}} </td>
+                        <td> {{ u.email }}</td>
+                        <td>
+                            <span class=""><i class="fa fa-edit"></i></span>
+                            <span class=""><i class="fa fa-trash" aria-hidden="true"></i></span>
+                        </td>
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+    </div>
+{% endblock %}
